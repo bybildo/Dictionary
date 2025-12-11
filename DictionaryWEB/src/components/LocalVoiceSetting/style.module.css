@@ -1,0 +1,88 @@
+.localVoiceSetting {
+    position: fixed;
+    width: 25vw;
+    height: auto;
+    padding: 2vh 2vw;
+    background: #133d66;
+    color: #f0f0f0;
+    border-radius: 1vh;
+    box-shadow: 0 0.5vh 2vh rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    animation: fadeIn 0.2s ease-out;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    backdrop-filter: blur(0.5vh);
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.localVoiceSetting h1 {
+    margin-bottom: 1.5vh;
+    font-size: 2.2vh;
+    text-align: center;
+}
+
+.localVoiceSetting select {
+    padding: 1vh;
+    font-size: 1.8vh;
+    border-radius: 0.5vh;
+    border: none;
+    background: #2a2a2aab;
+    color: #AAD2E6;
+    outline: none;
+    cursor: pointer;
+}
+
+.localVoiceSetting select::-webkit-scrollbar {
+    background: #2a2a2a00;
+}
+
+
+.localVoiceSetting select option:hover {
+    background: #00000018;
+}
+
+.localVoiceSetting select option:checked {
+    opacity: 0.7;
+}
+
+.localVoiceSetting button {
+    padding: 1vh;
+    font-size: 1.8vh;
+    border: none;
+    border-radius: 0.5vh;
+    cursor: pointer;
+    background: #082644;
+    opacity: 0.8;
+    color: #AAD2E6;
+    transition: opacity 0.2s ease-in-out;
+    margin-top: 100vh;
+}
+
+.localVoiceSetting button:hover {
+    opacity: 0.9;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -45%) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}

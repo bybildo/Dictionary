@@ -1,0 +1,30 @@
+.words {
+    display: block;
+    width: 100%;
+    padding-bottom: 4vh;
+}
+
+.header{
+    display: flex;
+    margin-left: 0.09vw;
+    height: 3.5vh;
+    margin-bottom: 2vh;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rowWords{
+    margin-top: 0.5vh;
+    margin-right: 0.1vw;
+    display: flex;
+    width: 7vw;
+    height: 100%;
+    gap: 0.5vw;
+}
+
+.words h1{
+    font-family: 'Poppins', 'Geologica', sans-serif;
+    font-weight: 500;
+    color: #AAD2E6;
+    font-size: 3.5vh;
+}

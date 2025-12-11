@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(circle at center, #062c55 0%, #01244A 100%);
+  background-color: #01244A;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 0.6vw;
+  height: 10%;
+  background: #011d3b;
+  z-index: 2;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #001122;
+  border-radius: 0.5vw;
+}

@@ -1,0 +1,93 @@
+.wordContainer {
+    width: 100%;
+    display: flex;
+    border-radius: 1vh;
+    overflow: hidden;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 0.2vh 1.3vh rgba(0, 0, 0, 0.274);
+    background: #184470;
+    margin-bottom: 1vh;
+}
+
+.word {
+    display: flex;
+    flex-direction: row;
+    width: 95%;
+    color: #AAD2E6;
+    font-size: min(max(2vh, 17px), 3.2vh);
+    font-family: "Poppins", "Geologica", sans-serif;
+    font-weight: 400;
+    gap: 1.4vw;
+    padding: 2.2vh 1.4vw;
+}
+
+.wordContainer:hover .separator {
+    opacity: 0.9;
+    background-color: #1dd69e;
+}
+
+.row1 .term {
+    min-width: 20%;
+    width: 20%;
+}
+
+.row3 .term {
+    min-width: 74%;
+    width: 74%;
+}
+
+.separator {
+    width: 0.11vw;
+    background-color: #AAD2E6;
+    align-self: stretch;
+    margin-top: -1vh;
+    margin-bottom: -1vh;
+    opacity: 0.6;
+    transition: all 0.23s ease-in-out;
+}
+
+.row1 .term,
+.row1 .definition,
+.row3 .term,
+.row3 .definition {
+    white-space: normal;
+    word-wrap: break-word;
+    word-break: break-word;
+}
+
+.row2 .term,
+.row2 .definition {
+    word-break: normal;
+}
+
+.studyLevel {
+    position: relative;
+    align-self: center;
+    width: 4vh;
+    height: 4vh;
+    border-radius: 50%;
+    transform: rotate(180deg);
+    background: conic-gradient(#AAD2E6 calc(var(--percent) * 1%),
+            #AAD2E660 0);
+}
+
+.studyLevel p{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -56%) rotate(-180deg);
+    z-index: 2;
+    font-size: 1.5vh;
+}
+
+.studyLevel::before {
+    content: '';
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    background: #184470;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}

@@ -1,0 +1,14 @@
+.lessons {
+  width: 100%;
+  height: 100vh;
+}
+
+.myMasonryGrid {
+  display: flex;
+  width: auto;
+}
+
+.myMasonryGridColumn {
+  padding: 0 0.3vw;
+  background-clip: padding-box;
+}

@@ -1,0 +1,177 @@
+.quickFill {
+    position: absolute;
+    display: block;
+    top: 7vh;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 65vw;
+    min-height: 90vh;
+    z-index: 4;
+    background: radial-gradient(circle at center, #062c55 0%, #01244A 220%);
+    border-radius: 2.5vh;
+    box-shadow: 0 0.2vh 1.3vh rgba(0, 0, 0, 0.356);
+    padding: 4vh 2vw;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: auto;
+    align-items: center;
+    height: 3vh;
+    margin-top: 5vh;
+    margin-bottom: 3vh;
+}
+
+.title {
+    font-family: 'Poppins', 'Geologica', sans-serif;
+    font-weight: 500;
+    width: 90%;
+    margin: auto;
+    font-size: 2.5vh;
+    color: #AAD2E6;
+    user-select: none;
+    padding-left: 0.5vh;
+}
+
+.textArea {
+    display: flex;
+    margin: auto;
+    margin-top: 2vh;
+    width: 90%;
+    overflow: hidden;
+    outline: none;
+    resize: none;
+    align-items: top;
+    background-color: #0a2542;
+    border: none;
+    border-radius: 1.3vh;
+    padding: 2vh 1.5vw;
+    font-family: 'Poppins', 'Geologica', sans-serif;
+    font-weight: 500;
+    color: #AAD2E6;
+    min-height: 14.5vh;
+    line-height: 3.5vh !important;
+    font-size: 2.3vh;
+    padding-bottom: 5.8vh !important;
+}
+
+.textArea:focus {
+    outline: none;
+}
+
+.textArea::placeholder,
+.textArea::placeholder {
+    color: rgba(255, 255, 255, 0.438);
+}
+
+.inputs {
+    border-radius: 0.7vh;
+    padding: 1.1vh 0.7vw;
+    width: 10vw;
+    font-size: 2vh;
+    color: #AAD2E6;
+    border: none;
+    outline: none;
+    background-color: #0a2542;
+    margin: 0 -0.2vw;
+}
+
+.inputs:focus {
+    outline: none;
+}
+
+.inputs::placeholder {
+    color: rgba(255, 255, 255, 0.438);
+}
+
+.radioButtons {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+    margin-top: 6vh;
+    padding-left: 5vw;
+}
+
+.radioButtons div {
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+}
+
+.radioButtons p {
+    font-weight: 500;
+    margin-bottom: 1vh;
+    font-size: 2.7vh;
+}
+
+.radioButtons label {
+    line-height: 5vh;
+    font-size: 2.5vh;
+    width: 12.5vw;
+}
+
+.radioB {
+    margin-right: 0.8vw;
+    accent-color: #053f7e;
+    width: 1.9vw;
+    height: 1.9vh;
+    border: 1vh;
+    cursor: pointer;
+}
+
+.radioButtons p,
+.radioButtons label {
+    font-family: 'Poppins', 'Geologica', sans-serif;
+    color: #AAD2E6;
+    user-select: none;
+}
+
+.exampleCards {
+    width: 90%;
+    margin: auto;
+    margin-top: 5vh;
+}
+
+.exampleCards p {
+    font-family: 'Poppins', 'Geologica', sans-serif;
+    font-weight: 500;
+    font-size: 2.5vh;
+    color: #AAD2E6;
+    user-select: none;
+    margin-left: 0.4vw;
+    margin-bottom: 2vh;
+}
+
+.buttons {
+    position: relative;
+    display: flex;
+    gap: 1.5vw;
+    justify-content: right;
+    margin-top: -5.7vh;
+    margin-right: 4.5vw;
+}
+
+.buttons p {
+    font-family: 'Poppins', 'Geologica', sans-serif;
+    font-weight: 600;
+    font-size: 1.8vh;
+    color: #AAD2E6;
+    border: #AAD2E6 0.2vh solid;
+    padding: 0.6vh 1vw;
+    border-radius: 0.6vh;
+    cursor: pointer;
+    user-select: none;
+    margin-left: 0.4vw;
+    margin-bottom: 2vh;
+}
+
+.buttons p:hover {
+    opacity: 0.98;
+}
+
+.buttons p:active {
+    transform: scale(0.98);
+}

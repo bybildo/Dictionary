@@ -1,0 +1,79 @@
+.lessonEmpty{
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.addLessonButtonBig {
+    width: 56%;
+    margin: auto;
+    text-align: center;
+    background: #001c3abd;
+    padding: 1vh 0;
+    font-size: 3vh;
+    border-radius: 1vh;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+}
+
+.addLessonButtonBig:hover p {
+    opacity: 0.8;
+}
+
+.addLessonButtonBig:active {
+    transform: scale(0.98);
+}
+
+.Arrow {
+    display: block;
+    color: red;
+    margin-left: auto;
+    margin-right: 8.5vw;
+    margin-top: 2vh;
+    opacity: 0.9;
+    height: 30vh;
+}
+
+
+:global(.svg-animate) {
+    stroke-dasharray: 2500;
+    stroke-dashoffset: 2500;
+    animation: draw-arrow 2s cubic-bezier(0.77, 0, 0.18, 1) 1s forwards;
+}
+
+:global(.fill-animate) {
+    fill: transparent;
+    animation: fill-arrow 0.8s ease-in 2s forwards;
+}
+
+.AddLessonHint {
+    font-size: 3vh;
+    color: #aed6eb00;
+    max-width: 15vw;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    margin-right: 5.2vw;
+    margin-left: auto;
+    margin-top: 1vh;
+    opacity: 0.9;
+    animation: fill-color 0.8s ease-in 2s forwards;
+    text-align: center;
+}
+
+@keyframes fill-arrow {
+    to {
+        fill: #aed6eb;
+    }
+}
+
+@keyframes fill-color {
+    to {
+        color: #aed6eb;
+    }
+}
+
+@keyframes draw-arrow {
+    to {
+        stroke-dashoffset: 0;
+    }
+}

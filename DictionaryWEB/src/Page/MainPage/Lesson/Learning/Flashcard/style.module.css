@@ -1,0 +1,163 @@
+.background {
+    background: linear-gradient(90deg, rgba(170, 210, 230, 1) -70%, rgba(170, 210, 230, 0) 15%, rgba(170, 210, 230, 0) 85%, rgba(170, 210, 230, 1) 170%);
+    transition: all 0.2s ease-in-out;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.background.active {
+    opacity: 0.2;
+}
+
+.background.active.paint {
+    opacity: 0.4;
+}
+
+.background.last {
+    background: linear-gradient(90deg, rgb(153, 236, 133) -20%, rgba(170, 210, 230, 0) 20%, rgba(170, 210, 230, 0) 80%, rgb(153, 236, 133) 120%);
+}
+
+.flashcard {
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    perspective: 100vw;
+    transform: translate(-50%, -47%);
+    outline: none;
+}
+
+.card {
+    width: 60vw;
+    height: 70vh;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.25s ease-in;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.backgroundCard {
+    position: absolute;
+    width: 60vw;
+    height: 70vh;
+    transform: translate(-50%, -51.8%);
+}
+
+.cardFace {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.cardFace,
+.backgroundCard {
+    padding-bottom: 6vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2vh 4vw;
+    text-align: center;
+
+    background: radial-gradient(circle at center, #01407D 0%, #032549 140%);
+    border-radius: 2vh;
+    box-shadow: 0 0.2vh 1.3vh rgba(0, 0, 0, 0.150);
+    color: #AAD2E6;
+    font-family: 'Poppins', "Geologica", sans-serif;
+    font-weight: 500;
+
+    user-select: none;
+    white-space: normal;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.cardBack {
+    transform: rotateX(-180deg);
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 2.5vh;
+}
+
+.buttons p {
+    cursor: pointer;
+    border-radius: 4vh;
+    width: 6vw;
+    height: 4.5vh;
+    font-size: 5vh;
+    line-height: 4.5vh;
+    align-content: center;
+    text-align: center;
+    border: #AAD2E6 0.2vh solid;
+    user-select: none;
+}
+
+.doneContainer {
+    position: relative;
+    display: flex;
+    cursor: pointer;
+    border-radius: 4vh;
+    width: 6vw;
+    height: 4.4vh;
+    border: #AAD2E6 0.2vh solid;
+    user-select: none;
+    padding: 0.41vh;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+    overflow: hidden;
+}
+
+.done {
+    width: 100%;
+    height: 100%;
+    stroke: #AAD2E6;
+    transition: all 0.2s ease-in-out;
+}
+
+.doneAnimation {
+    transition: all 1.1s ease-in-out;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, #aad2e688 0%, #aad2e65d 100%);
+    margin-right: 12vw;
+}
+
+.doneAnimation.active {
+    margin-right: 0vw;
+}
+
+.buttons p:active,
+.buttons div:active {
+    transform: scale(0.95);
+}
+
+.noTransition {
+    transition: none !important;
+}
+
+.rotateContainer {
+    display: flex;
+    width: 4.5vh;
+    height: 4.5vh;
+    border: #AAD2E6 0.2vh solid;
+    border-radius: 100%;
+    justify-content: center;
+}
+
+.rotate {
+    height: 100%;
+    width: 55%;
+    display: flex;
+    transition: all 0.2s ease-in-out;
+}

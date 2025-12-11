@@ -1,0 +1,8 @@
+.transformScale {
+    transform: scale(1);
+    transition: transform 0.1s ease-in-out;
+}
+
+.transformScale:active {
+    transform: scale(0.98);
+}

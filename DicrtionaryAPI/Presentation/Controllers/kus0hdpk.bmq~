@@ -1,0 +1,78 @@
+﻿using DicrtionaryAPI.Core.Application;
+using DicrtionaryAPI.Core.Application.Exeption;
+using DicrtionaryAPI.Infrastructure.Security;
+using DicrtionaryAPI.Presentation.DTOs.Requests;
+using Microsoft.AspNetCore.Mvc;
+using WebApi.Infrastructure;
+
+namespace DicrtionaryAPI.Presentation.Controllers
+{
+    [ApiController]
+    public class UsersController : ControllerBase
+    {
+        private readonly UserService _userService;
+        private readonly JwtService _jwtService;
+        private readonly ILogger<UserService> _logger;
+
+        public UsersController(UserService userService, JwtService jwtService)
+        {
+            _userService = userService;
+            _jwtService = jwtService;
+        }
+
+        [HttpPost("Login")]
+        public async Task<IActionResult> Login([FromBody] CreateUserRequest request, CancellationToken ct)
+        {
+            try
+            {
+                var token = await _userService.LoginOrCreateUserAsync(request.GoogleToken, ct);
+
+                var cookieOptions = new CookieOptions
+                {
+                    HttpOnly = true,
+                    Secure = true,
+                    SameSite = SameSiteMode.Strict,
+                    Expires = DateTime.UtcNow.AddDays(28)
+                };
+
+                Response.Cookies.Append("idToken", token, cookieOptions);
+                return Ok();
+            }
+            catch (UserInformationAlreadyExistException ex)
+            {
+                return StatusCode(409, ex.Message);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.ToString());
+            }
+        }
+
+        [HttpGet("Users")]
+        public async Task<IActionResult> ShowUsers(CancellationToken ct)
+        {
+            var users = await _userService.GetAllUsersAsync(ct);
+            return Ok(users);
+        }
+
+        [HttpGet("Me")]
+        public IActionResult GetCurrentUser()
+        {
+            if (!Request.Cookies.TryGetValue("idToken", out var token))
+                return Unauthorized();
+
+            var userId = _jwtService.ValidateToken(token);
+            if (userId == null)
+                return Unauthorized();
+
+            return Ok();
+        }
+
+        [HttpDelete("DeleteUsers")]
+        public async Task<IActionResult> DeleteUsers(CancellationToken ct)
+        {
+            await _userService.DeleteAllUsers(ct);
+            return Ok();
+        }
+    }
+}

@@ -1,0 +1,17 @@
+.mainPage p,
+.mainPage h1,
+.mainPage svg {
+    color: #aed6eb;
+    user-select: none;
+    font-family: 'Poppins', 'Geologica', sans-serif;
+}
+
+.body{
+    display: block;
+    width: 60%;
+    margin: auto;
+}
+
+.headerSpace {
+    height: 8vh;
+}

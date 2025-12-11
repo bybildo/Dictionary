@@ -1,0 +1,48 @@
+.lesson {
+  border-radius: 1vh !important;
+  background: radial-gradient(circle at center, #062c55c4 0%, #01244Ac4 200%);
+  backdrop-filter: blur(15px);
+  overflow: hidden;
+  box-shadow: 0 0.3vh 1.5vh rgba(0, 0, 0, 0.342);
+  min-height: 10vh;
+  margin-bottom: 1vh;
+  border-radius: 0.5vh;
+  display: block;
+  padding: 1.5vh 1.2vw;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+
+.lesson:hover {
+  transform: scale(1.01);
+  box-shadow: 0 0.2vh 2vh rgba(0, 0, 0, 0.356);
+}
+
+.lesson:active {
+  transform: scale(1);
+}
+
+.title {
+  font-weight: 500;
+  font-size: 2.5vh;
+  margin-bottom: 0.3vh;
+  transition: all 0.1s ease-in-out;
+}
+
+.description {
+  color: #a2cde4f8 !important;
+  font-weight: 400;
+  max-height: 0;
+  overflow: hidden;
+  font-size: 2vh;
+  transition: all 0.2s ease-in-out;
+
+  white-space: normal;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+.additionalInformation {
+  font-weight: 400;
+  font-size: 1.7vh;
+}

@@ -1,0 +1,199 @@
+.wordContainer {
+    position: relative;
+    transition: height 0.25s ease;
+    height: 18vh;
+    width: 100%;
+}
+
+.wordContainer.active {
+    height: 0vh;
+}
+
+.word {
+    border-radius: 2vh;
+    background: radial-gradient(circle at center, #062c55c4 0%, #01244Ac4 200%);
+    backdrop-filter: blur(15px);
+    height: 15vh;
+    overflow: hidden;
+    box-shadow: 0 0.2vh 1.3vh rgba(0, 0, 0, 0.356);
+    margin-bottom: 3vh;
+    transition: transform 0.2s ease-in,
+        margin 0.3s ease-out;
+}
+
+.word:hover {
+    transform: scale(1.01);
+    box-shadow: 0 0.2vh 2vh rgba(0, 0, 0, 0.356);
+}
+
+.word.activeScale {
+    transform: scale(1.013);
+    box-shadow: 0 0.2vh 2vh rgba(0, 0, 0, 0.400);
+}
+
+.wordMenu {
+    display: flex;
+    justify-content: space-between;
+}
+
+.numberOfLesson {
+    cursor: grab;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 2vh;
+    margin-right: 1vw;
+    padding: 0.5vh 1vw;
+    background-color: #014587;
+    border-radius: 0 0 2vh 0;
+}
+
+.numberOfLesson::after {
+    content: '=';
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 2vh;
+    margin-left: 0.5vw;
+    color: white;
+}
+
+.trash {
+    display: grid;
+    cursor: pointer;
+    margin-top: 0;
+    padding: 0.7vh 1.2vw;
+    height: 4vh;
+    background-color: #014587;
+    border-radius: 0 0 0 2vh;
+}
+
+.wordInputs {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.wordInputs.isEnd {
+    align-items: center;
+    margin-top: -1vh;
+}
+.wordInputs div {
+    width: 43%;
+}
+
+.wordInputs input {
+    width: 100%;
+    height: 30%;
+    background: linear-gradient(to top, #7796a5c9 1%, #01244a00 7%);
+    border: none;
+    color: #AAD2E6;
+    font-family: 'Poppins', "Geologica", sans-serif;
+    font-weight: 500;
+    font-size: 2vh;
+}
+
+.wordInputs p {
+    font-size: 1.6vh;
+    height: 1.6vh;
+    font-family: sans-serif;
+    text-align: center;
+    margin-top: 0.6vh;
+    color: rgb(255, 77, 77);
+    font-weight: 500;
+}
+
+.wordInputs p.active {
+    animation: shake 0.4s ease-in-out;
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+
+    20% {
+        transform: translateX(-4px);
+    }
+
+    40% {
+        transform: translateX(4px);
+    }
+
+    60% {
+        transform: translateX(-3px);
+    }
+
+    80% {
+        transform: translateX(3px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.wordInputs p svg {
+    fill: rgb(255, 77, 77);
+    height: 100%;
+    margin-top: -0.5vh;
+    vertical-align: middle;
+}
+
+.wordInputs input:focus {
+    background: linear-gradient(to top, #AAD2E6 1%, #01244a00 7%);
+    outline: none
+}
+
+.wordInputs input::placeholder {
+    color: #7796a5c9;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 2vh;
+    user-select: none;
+}
+
+.wordInputs input:focus::placeholder {
+    color: #aad2e6b7;
+}
+
+.thumb,
+.hand {
+    pointer-events: none;
+    visibility: collapse;
+    position: absolute;
+    width: 35vw;
+    height: 40vh;
+    top: -12vh;
+    right: -24vw;
+    z-index: 3;
+}
+
+.thumb {
+    z-index: 1;
+}
+
+.hand {
+    z-index: -1;
+}
+
+.thumb.active,
+.hand.active {
+    visibility: visible;
+}
+
+.word.active {
+    margin-right: -80vw;
+    margin-left: 80vw;
+}
+
+.renderText {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 2.5vh;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

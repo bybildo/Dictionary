@@ -1,0 +1,219 @@
+.addLesson {
+    display: block;
+    width: 90%;
+    margin: auto;
+}
+
+.addLesson h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    margin-bottom: 1vh;
+    color: #AAD2E6;
+    font-size: 3.5vh;
+}
+
+.form input,
+.form textarea {
+    width: 100%;
+    height: 6.5vh;
+    margin: 1vh 0;
+    padding: 0.5vw 1vw;
+    border-radius: 0.4vw;
+    background: #184470;
+    color: white;
+    font-family: 'Poppins', "Geologica", sans-serif;
+    font-weight: 400;
+    resize: none;
+    border: none;
+    overflow: hidden;
+    outline: none;
+}
+
+.form input {
+    font-size: 2.8vh;
+}
+
+.addLesson textarea {
+    font-size: 2vh;
+    line-height: 2.5vh;
+    padding-bottom: 1vh;
+}
+
+.input:focus,
+.textarea:focus {
+    outline: 0.1vw solid #aad2e6b4;
+}
+
+.input::placeholder,
+.textarea::placeholder {
+    color: #AAD2E6;
+    font-size: 2.8vh;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    opacity: 0.6;
+}
+
+.addLesson textarea::placeholder {
+    font-size: 2.2vh;
+}
+
+.options {
+    display: flex;
+    justify-content: space-around;
+    margin: 2.5vh 0;
+    height: 4vh;
+    align-items: center;
+}
+
+.visiblity {
+    display: flex;
+    position: relative;
+    align-items: center;
+    border-radius: 4vh;
+    border: 0.15vh solid #AAD2E6;
+    padding: 0.5vh 0.5vw;
+    width: auto;
+    min-width: 8vw;
+    justify-content: space-evenly;
+    overflow: hidden;
+    height: 4vh;
+}
+
+.visiblity:active {
+    transform: scale(0.95);
+}
+
+.visiblityBar {
+    position: absolute;
+    border-radius: 4vh 0 0 4vh;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #AAD2E6;
+    z-index: 2;
+    transition: left 0.3s ease-in-out,
+        border-radius 0.3s ease-in-out;
+}
+
+.visiblityBar.visiblityActive {
+    left: 50%;
+    border-radius: 0 4vh 4vh 0;
+}
+
+.visiblity p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+    font-size: 2vh;
+    z-index: 3;
+}
+
+.icon1,
+.icon2 {
+    width: 2.2vh;
+    height: 2.2vh;
+    z-index: 3;
+    transition: color 0.25s ease-in-out;
+}
+
+.icon1.visiblityActive {
+    color: #01244A !important;
+}
+
+.icon2.visiblityActive {
+    color: #01244A !important;
+}
+
+.swap {
+    align-self: center;
+    width: 4vh;
+    height: 4vh;
+    border: 0.15vh solid #AAD2E6;
+    border-radius: 50%;
+    padding: 0.8vh;
+    animation: spin0 0.25s linear;
+}
+
+.swap:active {
+    transform: scale(0.95);
+}
+
+.spin180 {
+    animation: spin180 0.25s linear;
+}
+
+@keyframes spin180 {
+    to {
+        transform: rotate(180deg);
+    }
+}
+
+.options p:not(.divider) {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color: #AAD2E6;
+    font-size: 2vh;
+    border: 0.15vh solid #AAD2E6;
+    padding: 0.5vh 1.5vw;
+    border-radius: 4vh;
+    height: 4vh;
+    display: flex;
+    align-items: center;
+    transition: all 0.1s ease-in-out;
+}
+
+.options p:not(.divider):active {
+    transform: scale(0.9);
+}
+
+.isActive {
+    color: #01244A !important;
+    background-color: #AAD2E6;
+}
+
+.words {
+    width: 99.5%;
+    margin: auto;
+    margin-top: 4vh;
+    position: relative;
+    overflow: visible;
+}
+
+.words.end {
+    margin-top: 0vh;
+}
+
+.addLesson li {
+    list-style: none;
+}
+
+.isHide {
+    display: none;
+}
+
+.buttons {
+    position: fixed;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 1.2vw;
+    top: 90vh;
+    left: 80vw;
+    font-size: 2.5vh;
+    font-weight: 500;
+    transition: left 0.2s ease-out;
+}
+
+.buttons p {
+    padding: 0.6vh 0.9vw;
+    border-radius: 0.8vh;
+    border: 0.15vh solid #AAD2E6;
+    color: #AAD2E6;
+}
+
+.buttons p:hover {
+    opacity: 0.9;
+}
+
+.buttons p:active {
+    transform: scale(0.97);
+}

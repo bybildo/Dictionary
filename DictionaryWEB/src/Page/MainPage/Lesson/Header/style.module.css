@@ -1,0 +1,30 @@
+.title {
+    display: inline-block;
+    margin-top: 2vh;
+    font-weight: 600;
+    font-size: 4vh;
+    transition: all 0.1s ease-in-out;
+    user-select: text !important;
+    cursor: default;
+    margin-bottom: 1.2vh;
+}
+
+.description {
+    user-select: text !important;
+    cursor: default;
+    color: #a2cde4f8 !important;
+    font-weight: 400;
+    max-height: 0;
+    overflow: hidden;
+    font-size: 2.3vh;
+    transition: all 0.2s ease-in-out;
+    background: #001c3a9a;
+    border-radius: 1vh;
+    padding: 0vh 1.3vw;
+    box-shadow: 0 0.2vh 2vh rgba(0, 0, 0, 0.1);
+
+    text-align: justify;
+    white-space: normal;
+    word-wrap: break-word;
+    word-break: break-word;
+}
